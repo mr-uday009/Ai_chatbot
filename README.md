@@ -4,22 +4,34 @@ A secure, natural-language chatbot for querying Db2 for z/OS mainframe data with
 
 ## Architecture Overview
 
+### Architecture V1
+
+![AI Chatbot Architecture V1](images/Ai%20ChatBot%20Architecture%20-%20V1.png)
+
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   Frontend      │────▶│   Node.js API   │────▶│   Java DB2 API  │
 │  (React/Streamlit)     (Port 3001)      │     (Port 8080)   │
 └─────────────────┘     └─────────────────┘     └────────┬────────┘
-                                                         │
-                                                ┌────────▼────────┐
-                                                │   Db2 for z/OS  │
-                                                │   (Mainframe)   │
-                                                └─────────────────┘
+                                                          │
+                                                 ┌────────▼────────┐
+                                                 │   Db2 for z/OS  │
+                                                 │   (Mainframe)   │
+                                                 └─────────────────┘
 ```
 
 ### Security Layers
 1. **Node.js** - Classifies intent, builds parameterized SELECT queries, calls NVIDIA LLM for natural responses
 2. **Java API** - Validates SQL against strict regex patterns, executes only approved SELECT queries on `EMPTAB`
 3. **Database** - Read-only credentials, `FETCH FIRST 50 ROWS ONLY` enforced
+
+## Demo
+
+### Interactive Demo
+
+[![Db2 AI Assistant Demo](images/Db2%20AI%20Assistant%20Demo.html)](images/Db2%20AI%20Assistant%20Demo.html)
+
+Click the image above or [open the demo directly](images/Db2%20AI%20Assistant%20Demo.html) to see the chatbot in action.
 
 ## Features
 
@@ -37,6 +49,9 @@ Ai_chatbot/
 ├── server.js                 # Node.js Express API (port 3001)
 ├── package.json              # Node.js dependencies
 ├── .env                      # Environment variables
+├── images/
+│   ├── Ai ChatBot Architecture - V1.png    # Architecture diagram
+│   └── Db2 AI Assistant Demo.html          # Interactive demo
 ├── frontend/
 │   ├── app.py               # Streamlit UI (port 8501)
 │   └── requirements.txt     # Python dependencies
