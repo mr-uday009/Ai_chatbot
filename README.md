@@ -17,7 +17,7 @@ A secure, natural-language chatbot for querying Db2 for z/OS mainframe data with
                                                  ┌────────▼────────┐
                                                  │   Db2 for z/OS  │
                                                  │   (Mainframe)   │
-                                                 └─────────────────┘
+                                    w             └─────────────────┘
 ```
 
 ### Security Layers
@@ -25,13 +25,13 @@ A secure, natural-language chatbot for querying Db2 for z/OS mainframe data with
 2. **Java API** - Validates SQL against strict regex patterns, executes only approved SELECT queries on `EMPTAB`
 3. **Database** - Read-only credentials, `FETCH FIRST 50 ROWS ONLY` enforced
 
-## Demo
+### Video Demo
 
-### Interactive Demo
+<video src="images/Db2%20AI%20Assistant%20Demo.webm" controls width="100%" poster="images/Ai%20ChatBot%20Architecture%20-%20V1.png">
+  Your browser does not support the video tag. <a href="images/Db2%20AI%20Assistant%20Demo.webm">Download or view the demo video directly</a>.
+</video>
 
-[![Db2 AI Assistant Demo](images/Db2%20AI%20Assistant%20Demo.html)](images/Db2%20AI%20Assistant%20Demo.html)
-
-Click the image above or [open the demo directly](images/Db2%20AI%20Assistant%20Demo.html) to see the chatbot in action.
+> **Note:** If inline video playback is not supported by your Markdown renderer, click [here to open or download the WebM video directly](images/Db2%20AI%20Assistant%20Demo.webm).
 
 ## Features
 
