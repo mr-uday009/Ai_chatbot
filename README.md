@@ -27,7 +27,7 @@ A secure, natural-language chatbot for querying Db2 for z/OS mainframe data with
 
 ### Video Demo
 
-<video src="images/Db2%20AI%20Assistant%20Demo.webm" controls width="100%" poster="images/Ai%20ChatBot%20Architecture%20-%20V1.png">
+<video src="https://github.com/user-attachments/assets/608369e6-361d-4ea7-af63-d0bda34d8bac" controls width="100%" poster="images/Ai%20ChatBot%20Architecture%20-%20V1.png">
   Your browser does not support the video tag. <a href="images/Db2%20AI%20Assistant%20Demo.webm">Download or view the demo video directly</a>.
 </video>
 
